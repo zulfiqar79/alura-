@@ -1,0 +1,414 @@
+body {
+    /* copiado de google font (pagina web de google con stylos de texto) */
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #BBBBBB;
+    padding: 20px ;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+/* esto es cada 1 de los 3 litem de la lista */
+.productos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /* background-color: #cccccc; */
+    /* border-color: black;
+    border-style:solid;
+    border-width: 2px; */
+
+    /* forma resumida*/
+    border: 2px solid black;    
+    margin: 0 1.5%;
+
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 10px ;
+}
+
+.productos li:hover{
+    border-color: #c79c19 ;
+    /* no funciona cambiar tamañao letra pq titulo esta en .css con etiqueta h2 y eso tiene prioridad */
+    /* resuelvo haciendo esto pero en etiqueta h2 *** */
+    /* cambia tamaño de letra */
+    font-size: 33px;
+}
+
+/*  ***  */
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+/* captura el click del mouse */
+.productos li:active{
+    /* hace esto con el click, cambia de color */
+    border-color: #088c19 ;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/* captura mov mouse, y cambia color */
+nav a:hover{
+    color: #c79c19;
+    /* pone subrayado cuando mouse pase  */
+    text-decoration: underline;
+}
+
+footer{
+    text-align: center;
+    /* background-color: #CCCCCC; */
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+/* no es recomendable */
+/* footer p {
+} */
+
+/* mejor asi con clases  */
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+
+/* main{ */
+    /* width: 940px; */
+    /* o arriba abajo, automatico para costados */
+    /* margin: 0 auto;  */
+/* } */
+
+form{
+    margin: 40px 0;
+}
+
+form label, legend {
+    display: block;
+    font-size: 20px;
+    /* margin sigye sentid agujas reloj, 0 arrova 0 derecha, 10px  abajo  */
+    margin: 0 0 10px;
+}
+
+/* esto es selector de etiqueta */
+/* form input, form textarea{
+
+} */
+
+input-padron{
+    /* display block hace q casa etiqeta ocupe el 100% de la pog */
+    display: block; 
+    margin: 0 0 20px;
+    /* 10px inf y sup, 25px costados */
+    padding: 10px 25px;
+    /* 50% del width q puse en main, contenedora de form, input */
+    width: 50%;
+}
+
+.checkbox {
+    /* 20 mergen vertical, arriba abajo. 0 en laterales der y izq */
+    margin: 20px 0;
+}
+
+
+/* ** DIFERENTES MANERAS LLAMAR LO MISMO, PERO DISTINTA JERARQUIA**  */
+p {
+    color: black
+}
+
+.test {
+    color: yellow;
+}
+
+p.test {
+    color: orange
+}
+
+#test {
+    color: pink;
+}
+/* ** **  */
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    /* transition: 1s background; */
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: darkorange;
+    transform: scale(1.2) 
+    /* transform: scale(3) rotate(800deg); */
+}
+
+table {
+    margin: 40px 40px;
+}
+
+thead {
+    background-color: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* inicia CSS para index */
+
+.banner {
+    width: 100%;
+}
+
+/* pone stylo a hijo directo de main q sea p */
+main > p { 
+    background-color: red;    
+}
+
+img + p {
+    background: yellow;
+}
+
+/* alt 126 */
+/* pone stylos a todos p que viene desp de img */
+/* sobreescribe anterior yellow */
+img ~ p {
+    background: green;
+}
+
+/* pone stylos a todos menos vision. estoy dentro class principal */
+.principal p:not(#mision){
+    background: orange;
+}
+
+.principal {
+    padding: 3em 0;
+    background-color: #fefefe;
+     width: 940px;
+    /* o arriba abajo, automatico para costados */
+    margin: 0 auto; 
+}
+
+
+.titulo-principal {
+    text-align: center;    
+    /* 2em = 2 veces tamaño defecto navergador (= 2 x 15px) */
+    font-size: 2em; 
+    /* margen 0 arriba, 0 abajo, 2 derecha */
+    margin: 0 0 1em;
+    /* clear: left, la imagen q esta en este bloque, solo aplica para este bloque */
+    clear: left;
+    /* pone color (218,0,0 ) y opaco (0.3) color a este elemento, titulos */
+    color: rgba(218,0,0,0.3);
+    /* SIN OPACO EN COLOR */
+    /* color: rgb(218,0,0) */
+    /* sombra 2px en horizantal y vertical, 10 tamaño de expansion sombra color red*/
+    text-shadow: 2px 2px 10px red;
+}
+
+/* este no hace ahora css pq hace el ulitmo  :before, y :after */
+.titulo-principal:first-letter {
+    font-weight: bold;
+}
+
+.titulo-principal:before {
+    content: '[';
+}
+
+.titulo-principal:after {
+    content: ']';
+}
+
+p:first-line {
+    font-style: italic;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    /* hace q imagen este en lado izq de texto */
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+    /* background: linear-gradient(90deg, orange 50%,blue, RED, black); */
+    /* background: radial-gradient(orange 50%,blue, RED, black); */
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido {
+    width: 940px;
+    /* con margin centro mapa 0 vertical, automatico en laterales */
+    margin: 0 auto;
+}
+
+.diferenciales {
+    padding: 3em 0;
+    background-color: #888888;
+    /* punto refenencia sea centro del bloque  */
+    box-shadow: inset 0 0 30px red;
+}
+
+.contenido-diferenciales {
+    /* 40% lista diferencial de este div contenedor, q tiene width 640px */
+    width: 640px;
+    /* 0 arriba abajo, automatico latareles */
+    margin: 0 auto;
+}
+
+.lista-diferenciales {
+    width: 40%; 
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items {
+    /* espacio entre linea de texto */
+    line-height: 1.5;
+}
+
+.items::before{
+    content: "☆";
+}
+
+/* seudo clase */
+/* al primero item de lista items, hacele esto: (pintalo de negro) */
+.items:first-child {
+    font-weight: bold;    
+}
+
+/* idem pero con ultimo */
+.items:last-child {
+    font-weight: bold;    
+}
+
+/* hacele esto al elemento 3 de la lista */
+.items:nth-child(3){
+    font-weight: bold;
+}
+
+/* hacele esto a elemento pares de la lista */
+.items:nth-child(2n){
+    font-weight: bold;
+}
+
+#imagen-Diferenciales {
+    /* margen en toda direccion  */
+    width: 60%;
+    /* esta transicion va hacer el hover de abaj */
+    transition: 400ms;
+    /* efecto sombra 10 ejex 10 ejey, 30 difuminado , 25 expansion hasta donde llega sombra*/
+    box-shadow: 10px 10px 30px 25px #000000, -10px -10px yellow,
+    -15px 10px rgba(50,50,50,0.5);
+    /* otro difuminado mas */
+}
+
+/* hacer esto cuando mouse pase por esta imagen */
+#imagen-Diferenciales:hover {
+    /* poner opaco imagen */
+     opacity: 0.3;
+}
+
+.video {
+    width: 560px;
+    margin: 1em auto;
+}
+
+/* usar condiciones,  */
+/* si encontras pantalla q mira esta pog html, q tenga como maximo ancho de 480px, hace esto */
+@media screen and (max-width: 480px){
+    /* body{
+        background:red;
+    } */
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video {
+        /* pq en cel y tablet ajuste solo a tamaño mas apropiado */
+        width: auto;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+
+}

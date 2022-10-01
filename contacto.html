@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barberia Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">   
+                <h1><img src="imagenes/logo.png" alt="¨Barberia Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="productos.html">productos</a></li>
+                        <li><a href="contacto.html">contacto</a></li>
+                    </ui>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form>
+                <label for="nombreApellido">Nombre y Apellido</label>
+                <input type="text" id="nombreApellido" class="input-padron" required>
+
+                <!-- tipo email en cel aparece en teclado para poner arroba  -->
+                <label for="correoElectronico">Correo Electronico</label>
+                <input type="email" id="correoElectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                <!-- tipo tel  en cel aparece en teclado para poner numeros  -->
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+                
+                <label for="mensaje">Mensaje</label>
+                <!-- cols columnas, rows filas -->
+                <textarea  id="mensaje" cols="70" rows="10" class="input-padron" required></textarea>
+               
+                <fieldset>
+                    <legend>Como lo contactamos</legend>
+                    <!-- <p class="test" id="test" style="color:purple"> Como lo contactamos</p> -->
+    
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                    
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
+                    
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>En que horario quiere que contactemos</legend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox" ><input type="checkbox" checked> Suscribite a newsletter de Alura </label>
+                <input type="submit" value="enviar formulario" class="enviar">
+            </form>
+            
+            <table>
+                <!-- >thead> encabeza tabla -->
+                <thead>
+                    <tr>
+                        <!-- <th> celdas para encabezado  -->
+                        <th>Dia</th>
+                        <th>Horarios</th>
+                    </tr>
+                </thead>
+                
+                <!-- <tbody> cuerpo de tabla  -->
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h -20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miercoles</td>
+                        <td>08h -20h</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h -20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="¨Barberia Alura">
+            <p class="copyright">&copy Copyright año 2020</p>
+        </footer>
+    </body>
+</html>
